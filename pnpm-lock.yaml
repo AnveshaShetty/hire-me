@@ -26,9 +26,6 @@ importers:
       '@hono/zod-validator':
         specifier: ^0.9.0
         version: 0.9.0(hono@4.13.1)(zod@4.4.3)
-      '@neondatabase/serverless':
-        specifier: ^0.10.4
-        version: 0.10.4
       '@repo/db':
         specifier: workspace:*
         version: link:../../packages/db
