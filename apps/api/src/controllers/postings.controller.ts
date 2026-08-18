@@ -1,7 +1,7 @@
 import { and, asc, desc, eq, gte, ilike, isNull, lte, or, sql } from 'drizzle-orm'
 import type { Database } from '@repo/db'
 import { postings, recruiters } from '@repo/db'
-import { type PaginationParams, pageToOffset } from '../lib/pagination.js'
+import { type PaginationParams, pageToOffset } from '../utils/pagination.js'
 
 // ==========================================
 // TYPES

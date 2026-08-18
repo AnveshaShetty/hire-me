@@ -1,5 +1,7 @@
 import { describe, expect, it, vi, beforeEach } from 'vitest'
-import { app } from '../app.js'
+import { app } from '../server.js'
+
+process.env.DATABASE_URL = 'postgresql://fake'
 
 /** Parse a Response body as JSON with a loose type for easy test assertions. */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -13,12 +15,12 @@ async function json(res: Response): Promise<any> {
 // We mock the service layer so tests don't require a real database.
 // Each test configures the mock return values it needs.
 
-vi.mock('../lib/postings-service.js', () => ({
+vi.mock('../controllers/postings.controller.ts', () => ({
   listActivePostings: vi.fn(),
   getPostingById: vi.fn(),
 }))
 
-import { listActivePostings, getPostingById } from '../lib/postings-service.js'
+import { listActivePostings, getPostingById } from '../controllers/postings.controller.js'
 
 // ==========================================
 // FIXTURES

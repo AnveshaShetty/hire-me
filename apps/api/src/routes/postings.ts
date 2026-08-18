@@ -2,8 +2,8 @@ import { Hono } from 'hono'
 import { zValidator } from '@hono/zod-validator'
 import { z } from 'zod'
 import type { DbVariables } from '../middleware/db.js'
-import { listActivePostings, getPostingById } from '../lib/postings-service.js'
-import { buildPaginationMeta, PAGINATION_DEFAULTS } from '../lib/pagination.js'
+import { listActivePostings, getPostingById } from '../controllers/postings.controller.js'
+import { buildPaginationMeta, PAGINATION_DEFAULTS } from '../utils/pagination.js'
 
 // ==========================================
 // QUERY PARAM SCHEMAS
