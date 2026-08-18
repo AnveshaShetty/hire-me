@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { app } from '../server.js'
+import { app } from '../app.js'
 
 process.env.DATABASE_URL = 'postgresql://fake'
 

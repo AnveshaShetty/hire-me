@@ -1,5 +1,5 @@
 import { describe, expect, it, vi, beforeEach } from 'vitest'
-import { app } from '../server.js'
+import { app } from '../app.js'
 
 process.env.DATABASE_URL = 'postgresql://fake'
 
