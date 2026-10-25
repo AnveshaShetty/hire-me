@@ -141,7 +141,6 @@ export default function RecruiterOnboardingPage() {
       // Handled by mutation hook with sonner toast
     }
   }
-
   const handleNext = async () => {
     if (step === FIRST_STEP) {
       const isValid = await trigger(STEP_1_FIELDS)
