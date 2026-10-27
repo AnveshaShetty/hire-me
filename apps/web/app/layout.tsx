@@ -1,14 +1,13 @@
 import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans } from 'next/font/google'
 import type { ReactNode } from 'react'
-
+import { Providers } from './providers'
 import './globals.css'
-import QueryProvider from './QueryProvider'
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
   variable: '--font-sans',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -20,9 +19,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={plusJakartaSans.variable}>
       <body className="antialiased font-sans bg-white text-text-main min-h-screen flex flex-col">
-        <QueryProvider>
-          {children}
-        </QueryProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   )
